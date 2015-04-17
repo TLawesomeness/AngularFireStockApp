@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="icon" href="http://getbootstrap.com/favicon.ico">
+
+    <title>AngularJS & Firebase Web App</title>
+
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="blog.css" rel="stylesheet">
+
+</head>
+
+<body ng-controller="WelcomeCtrl">
+
+    <div class="blog-masthead">
+        <div class="container">
+            <nav class="blog-nav">
+                <!-- <a class="blog-nav-item active" href="#">Home</a> -->
+                <a id="logout" class="blog-nav-item active" href="#">Logout</a>
+
+            </nav>
+        </div>
+    </div>
+    <div id="display" class="container">
+        <div class="page-header">
+            <h1 id="header">InstaStocks</h1>
+        </div>
+        <p class="lead">Welcome <b>{{username}}</b> !!</p>
+
+        <input id="cashInput" type="number" placeholder="Enter Amount" ng-model="cashBal"/>
+        <button id="addCash" ng-click="addBal()">Add Cash</button>
+
+        <div id="balance">
+          <span id="total">Balance: $0 </span>
+        </div>
+
+        <h2 id="portHeader">Create Portfolio</h2><br />
+          <input id="portfolioInput" type="text" placeholder="Enter a name" ng-model="createPortfolio"/>
+          <button id="makePort" ng-click="makePortfolio()"> Create Portfolio </button>
+
+        <h2 id="stockHeader">Buy Stock</h2>
+        <input id="symbol" type="text" placeholder="input symbol" ng-model="symb"/>
+        <select id="portfolioSelect">
+          <option>Tech</option>
+          <option>Energy</option>
+          <option>Bank</option>
+        </select>
+        <input id="numShares" type="number" placeholder="share amount" ng-model="shares"/>
+        <button id="buyStock" ng-click="buyStock()">Buy</button>
+        <div id="showStocks"></div>
+
+        <div id="showPort">
+          <table id="portfolios">
+          </table>
+        </div>
+
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="text-muted"></p>
+        </div>
+    </footer>
+
+</body>
+
+</html>
