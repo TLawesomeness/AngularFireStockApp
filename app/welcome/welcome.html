@@ -42,18 +42,14 @@
 
         <h2 id="stockHeader">Buy Stock</h2>
         <input id="symbol" type="text" placeholder="input symbol" ng-model="symb"/>
-        <select id="portfolioSelect">
-          <option>Tech</option>
-          <option>Energy</option>
-          <option>Bank</option>
-        </select>
         <input id="numShares" type="number" placeholder="share amount" ng-model="shares"/>
+        <select id="portfolioSelect">
+          <option disabled selected> -- select an option -- </option>
+        </select>
         <button id="buyStock" ng-click="buyStock()">Buy</button>
         <div id="showStocks"></div>
 
-        <div id="showPort">
-          <table id="portfolios">
-          </table>
+        <div id="displayStocks">
         </div>
 
     </div>

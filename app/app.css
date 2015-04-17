@@ -52,3 +52,10 @@ h2 {
 #portHeader, #stockHeader {
   margin-top: 20px;
 }
+
+#displayStocks {
+  margin: 20px;
+  border: 1px solid red;
+  height: 250px;
+  width: auto;
+}
